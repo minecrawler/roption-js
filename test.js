@@ -31,7 +31,7 @@ TAP.test('Test interface', $t => {
 
         if (typeof _interface[$fun] === 'function') {
 
-            if (['fromSome', 'fromNone'].includes(_interface[$fun].name)) {
+            if (['fromSome', 'fromNone'].indexOf(_interface[$fun].name) >= 0) {
                 $t.ok('inline implementation');
                 return;
             }
