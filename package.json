@@ -1,0 +1,42 @@
+{
+  "name": "option-js",
+  "version": "1.0.0",
+  "description": "Rusty Monad Options for JS",
+  "author": {
+    "email": "me@marco-alka.de",
+    "name": "Marco Alka",
+    "url": "https://marco-alka.de"
+  },
+  "bugs": {
+    "url": "https://github.com/minecrawler/option-js/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coveralls": "^2.11.15",
+    "tap": "^8.0.1"
+  },
+  "keywords": [
+    "Rust",
+    "Option",
+    "Monad"
+  ],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "maruru",
+      "email": "me@marco-alka.de"
+    }
+  ],
+  "optionalDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minecrawler/option-js.git"
+  },
+  "scripts": {
+    "test": "tap test.js --coverage --coverage-report=lcov"
+  },
+  "engines" : {
+    "node" : ">=4.0.0"
+  }
+}
