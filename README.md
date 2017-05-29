@@ -1,9 +1,9 @@
-# option-js
+# roption-js
 Rusty Monad Options for JS
 ---
 
-[![Build Status](https://travis-ci.org/minecrawler/option-js.svg?branch=master)](https://travis-ci.org/minecrawler/result-js)
-[![Coverage Status](https://coveralls.io/repos/github/minecrawler/option-js/badge.svg)](https://coveralls.io/github/minecrawler/result-js)
+[![Build Status](https://travis-ci.org/minecrawler/roption-js.svg?branch=master)](https://travis-ci.org/minecrawler/roption-js)
+[![Coverage Status](https://coveralls.io/repos/github/minecrawler/roption-js/badge.svg)](https://coveralls.io/github/minecrawler/roption-js)
 
 Everyone knows that when dealing with data, sometimes there is nothing to pass or nothing to return.
 Usually, in JS, we have to decide for either `undefined` or `null`, but also sometimes `NaN` and similar.
@@ -15,14 +15,14 @@ This module is based on the Rust implementation, but brings some changes in orde
 One of the major differences is that option-js uses lowerCamelCase instead of snake_case.
 Additionally, the methods involving `std::result::Result` were not implemented, since they require a Result-dependency.
 
-`option-js` does not have any dependencies and conducts unit tests and coverage with `TAP` and `coveralls`.
+`roption-js` does not have any dependencies and conducts unit tests and coverage with `TAP` and `coveralls`.
 
 **You can find the complete API, as defined in code, below the examples!**
 
 
 ## Installation
 
-    npm i option-js --save
+    npm i roption-js --save
 
 
 ## Simple Example
@@ -55,7 +55,7 @@ readFromDB(rows => {
 // With Option
 
 
-const Option = require('option-js');
+const Option = require('roption-js');
 
 readFromDB(result => {
   const rows = Option.fromGuess(result);
@@ -73,7 +73,7 @@ readFromDB(result => {
 ```js
 'use strict';
 
-const Option = require('option-js');
+const Option = require('roption-js');
 
 const hasSome = Option.fromSome('YaY');
 const hasNone = Option.fromNone();

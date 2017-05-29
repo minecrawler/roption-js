@@ -1,5 +1,5 @@
 {
-  "name": "option-js",
+  "name": "roption-js",
   "version": "1.0.0",
   "description": "Rusty Monad Options for JS",
   "author": {
