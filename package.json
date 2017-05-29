@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "roption-js",
   "version": "1.0.0",
@@ -13,7 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "coveralls": "^2.13.1",
-    "tap": "^8.0.1"
+    "tap": "^10.3.2"
   },
   "keywords": [
     "Rust",
