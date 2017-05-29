@@ -1,9 +1,12 @@
 # roption-js
+
 Rusty Monad Options for JS
 ---
 
 [![Build Status](https://travis-ci.org/minecrawler/roption-js.svg?branch=master)](https://travis-ci.org/minecrawler/roption-js)
 [![Coverage Status](https://coveralls.io/repos/github/minecrawler/roption-js/badge.svg)](https://coveralls.io/github/minecrawler/roption-js)
+[![Known Vulnerabilities](https://snyk.io/test/github/minecrawler/roption-js/badge.svg)](https://snyk.io/test/github/minecrawler/roption-js)
+[![Greenkeeper badge](https://badges.greenkeeper.io/minecrawler/roption-js.svg)](https://greenkeeper.io/)
 
 Everyone knows that when dealing with data, sometimes there is nothing to pass or nothing to return.
 Usually, in JS, we have to decide for either `undefined` or `null`, but also sometimes `NaN` and similar.

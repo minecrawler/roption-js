@@ -8,12 +8,12 @@
     "url": "https://marco-alka.de"
   },
   "bugs": {
-    "url": "https://github.com/minecrawler/option-js/issues"
+    "url": "https://github.com/minecrawler/roption-js/issues"
   },
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^2.11.15",
-    "tap": "^8.0.1"
+    "coveralls": "^2.13.1",
+    "tap": "^10.3.2"
   },
   "keywords": [
     "Rust",
@@ -31,12 +31,12 @@
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minecrawler/option-js.git"
+    "url": "git+https://github.com/minecrawler/roption-js.git"
   },
   "scripts": {
     "test": "tap test.js --coverage --coverage-report=lcov"
   },
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   }
 }

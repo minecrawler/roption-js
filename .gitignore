@@ -59,3 +59,9 @@ typings/
 
 # JetBrains
 .idea/
+
+# Coveralls
+.coveralls.yml
+
+# Package lock (no dependencies, so...)
+package-lock.json
