@@ -4,6 +4,7 @@ require('./src/option._init.c');
 require('./src/option.and.c');
 require('./src/option.andThen.c');
 require('./src/option.expect.c');
+require('./src/option.fromGuess.c');
 require('./src/option.isNone.c');
 require('./src/option.isSome.c');
 require('./src/option.iter.c');

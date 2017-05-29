@@ -110,6 +110,17 @@ module.exports = class Option {
     static fromNone() { return new Option(false, null); };
 
     /**
+     * Create an Option from a value.
+     * An algorithm takes a guess if it should be a Some or a None.
+     * undefined, null and NaN will be returned as None
+     * Empty arrays will be transformed to None
+     *
+     * @param {*} val
+     * @returns {Option}
+     */
+    static fromGuess(val) { throw new Error ('Not Implemented: Option.fromGuess'); };
+
+    /**
      * Register Some and None on a global scope
      */
     static registerGlobals() { throw new Error ('Not Implemented: Option.registerGlobals'); };

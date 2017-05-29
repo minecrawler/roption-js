@@ -32,7 +32,7 @@ TAP.test('Test interface', $t => {
         if (typeof _interface[$fun] === 'function') {
 
             if (['fromSome', 'fromNone'].indexOf(_interface[$fun].name) >= 0) {
-                $t.ok('inline implementation');
+                $t.pass('inline implementation');
                 return;
             }
 
@@ -51,10 +51,11 @@ const Option = require('.');
 
 TAP.test('Create Options', $t => {
 
-    $t.plan(3);
+    $t.plan(4);
 
     $t.ok(Option.fromNone(), 'Create Option from None');
     $t.ok(Option.fromSome('TEST'), 'Create Option from Some');
+    $t.ok(Option.fromGuess('TEST'), 'Create Option from Guess');
     $t.ok((new Option()).isNone(), 'Create Option with neither val nor err');
 
     $t.end();
@@ -62,7 +63,7 @@ TAP.test('Create Options', $t => {
 
 TAP.test('Some() Tests', $t => {
 
-    $t.plan(11);
+    $t.plan(14);
 
     const s = Option.fromSome('TEST');
 
@@ -88,12 +89,16 @@ TAP.test('Some() Tests', $t => {
         $t.fail('Check Some.match');
     });
 
+    $t.ok(Option.fromGuess(Math.random()).isSome(), 'Check Option.fromGuess from number');
+    $t.ok(Option.fromGuess('Hellow').isSome(), 'Check Option.fromGuess from string');
+    $t.ok(Option.fromGuess([1,2,3, '']).isSome(), 'Check Option.fromGuess from array');
+
     $t.end();
 });
 
 TAP.test('None() Tests', $t => {
 
-    $t.plan(11);
+    $t.plan(15);
 
     const e = Option.fromNone();
 
@@ -117,8 +122,13 @@ TAP.test('None() Tests', $t => {
 
     }, () => {
 
-        $t.ok('Check None.match');
+        $t.pass('Check None.match');
     });
+
+    $t.ok(Option.fromGuess(null).isNone(), 'Check Option.fromGuess from null');
+    $t.ok(Option.fromGuess(undefined).isNone(), 'Check Option.fromGuess from undefined');
+    $t.ok(Option.fromGuess([]).isNone(), 'Check Option.fromGuess from empty array');
+    $t.ok(Option.fromGuess(NaN).isNone(), 'Check Option.fromGuess from NaN');
 
     $t.end();
 });
@@ -173,7 +183,7 @@ TAP.test('Misc Tests', $t => {
         $t.fail('Option.map Test on Err');
     }, () => {
 
-        $t.ok('Option.map Test on Err');
+        $t.pass('Option.map Test on Err');
     });
 
     let c = 0;
@@ -193,7 +203,7 @@ TAP.test('Misc Tests', $t => {
 
     const originalWrite = process.stderr.write;
     process.stderr.write = $str => {
-        $t.ok('Warn user about unset None-handler when using match');
+        $t.pass('Warn user about unset None-handler when using match');
         process.stderr.write = originalWrite;
     };
 
