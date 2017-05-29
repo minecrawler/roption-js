@@ -8,7 +8,7 @@
     "url": "https://marco-alka.de"
   },
   "bugs": {
-    "url": "https://github.com/minecrawler/option-js/issues"
+    "url": "https://github.com/minecrawler/roption-js/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -31,7 +31,7 @@
   "optionalDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/minecrawler/option-js.git"
+    "url": "git+https://github.com/minecrawler/roption-js.git"
   },
   "scripts": {
     "test": "tap test.js --coverage --coverage-report=lcov"
