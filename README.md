@@ -1,4 +1,6 @@
 # option-js
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/minecrawler/roption-js.svg)](https://greenkeeper.io/)
 Rusty Monad Options for JS
 ---
 
