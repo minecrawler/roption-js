@@ -12,7 +12,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^2.11.15",
+    "coveralls": "^2.13.1",
     "tap": "^8.0.1"
   },
   "keywords": [
@@ -36,7 +36,7 @@
   "scripts": {
     "test": "tap test.js --coverage --coverage-report=lcov"
   },
-  "engines" : {
-    "node" : ">=4.0.0"
+  "engines": {
+    "node": ">=4.0.0"
   }
 }
